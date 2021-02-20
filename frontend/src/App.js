@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router history={history}>
         <TopBar />
-        <Route path="/"exact component={HomePage} />
+        <Route path="/" exact component={HomePage} />
         <Route path="/chatroom" exact component={ChatRoomPage} />
       </Router>
     </div>
