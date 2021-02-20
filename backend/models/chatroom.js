@@ -1,4 +1,5 @@
 'use strict';
+/*
 const {
   Model
 } = require('sequelize');
@@ -8,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // define association here
     }
@@ -20,4 +20,18 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'ChatRoom',
   });
   return ChatRoom;
-};
+}; */
+
+module.exports = (sequelize, DataTypes) => {
+  const ChatRoom = sequelize.define("ChatRoom", {
+    name: DataTypes.STRING,
+  }, {});
+  ChatRoom.associate = function(modes){
+    // association can be defined here
+    ChatRoom.hasMany(models.ChatRoomMessage, {
+      foreignKey: "chatRoomId",
+      sourceKey: "id",
+    });
+  }
+  return ChatRoom;
+}
