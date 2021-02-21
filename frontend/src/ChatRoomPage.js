@@ -1,13 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Formik } from "formik";
-import Form from "react-boostrap/Form";
+import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import * as yup from "yup";
 import io from "socket.io-client";
 import "./ChatRoomPage.css";
-import {getChatRoomMessages, getChatRooms } from "./request";
+import {getChatRoomMessages, getChatRooms } from "./requests";
 const SOCKET_IO_URL = "http://localhost:3000";
 const socket = io(SOCKET_IO_URL);
 

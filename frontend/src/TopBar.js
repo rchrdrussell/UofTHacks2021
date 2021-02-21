@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "react-boostrap/Navbar";
+import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { withRouter } from "react-router-dom";
 
