@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   const ChatRoom = sequelize.define("ChatRoom", {
     name: DataTypes.STRING,
   }, {});
-  ChatRoom.associate = function(modes){
+  ChatRoom.associate = function(models){
     // association can be defined here
     ChatRoom.hasMany(models.ChatRoomMessage, {
       foreignKey: "chatRoomId",

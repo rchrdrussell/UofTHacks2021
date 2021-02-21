@@ -8,9 +8,9 @@ const indexRouter = require('./routes/index');
 const chatRoomRouter = require('./routes/chatRoom');
 
 const app = express();
-const corts = require('cors');
+const cors = require('cors');
 const chatroom = require('./models/chatroom');
-const { RESERVED_EVENTS } = require('socket.io/dist/socket');
+const { RESERVED_EVENTS } = require('socket.io');
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

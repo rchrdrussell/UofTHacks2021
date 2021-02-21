@@ -43,5 +43,5 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  return ChatMessage
+  return ChatRoomMessage
 }
